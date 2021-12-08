@@ -28,6 +28,7 @@ const rentalsSchema = {
   bathrooms: Number,
   latitude: Number,
   longitude: Number,
+  suburb: String,
 }
 
 //data model
@@ -41,7 +42,7 @@ app.get('/rentals', (req, res) => {
 });
 
 //create route
-app.post('/rental', (req, res) => {
+app.post('/rentals', (req, res) => {
   const newRental = new Rental({
     _id: req.body._id,
     name: req.body.name,
@@ -50,8 +51,9 @@ app.post('/rental', (req, res) => {
     bathrooms: req.body.bathrooms,
     latitude: req.body.latitude,
     longitude: req.body.longitude,
+    suburb: req.body.suburb,
   })
-  newContact.save()
+  newRental.save()
   .then(contact => console.log(contact))
   .catch((err) => res.status(400).json("Error " + err))
 })

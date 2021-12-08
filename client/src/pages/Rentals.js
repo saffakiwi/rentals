@@ -1,12 +1,15 @@
 import React from 'react';
-import GoogleMaps from '../components/GoogleMaps';
-
+import Map from '../components/Maps';
 
 function Rentals() {
 
-
     return (
-        <GoogleMaps />
+        <div>
+        
+
+        <Map />
+        </div>
+       
     )
 }
 
