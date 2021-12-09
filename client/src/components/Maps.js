@@ -27,9 +27,10 @@ function Map() {
   
 
   const [viewport, setViewport] = useState({
+    borderRadius: "20px",
     marginTop: 300,
     width: '100%',
-    height: 400,
+    height: 700,
     latitude: -36.8872772,
     longitude: 174.7473766,
     zoom: 12
@@ -51,9 +52,10 @@ function Map() {
     getRental()
   }, []);
 
-  const handleMarkerClick = (id) =>{
-    setCurrentPlaceId(id)
+  const handleMarkerClick = (suburb) =>{
+    setCurrentPlaceId("mt eden")
   }
+
 
   return (
     <div>
@@ -64,7 +66,8 @@ function Map() {
   onViewportChange={nextViewport => setViewport(nextViewport)}
   mapStyle= "mapbox://styles/kiwisaffa/ckwvtde2o6adp14mnxz8vd8jd">  
 
-{rental.map(rental=>(
+
+{rental.map(rental => (
 
   <Marker 
     latitude={rental.Latitude} 
@@ -78,8 +81,9 @@ function Map() {
         </Paper>
       <Room className={classes.pins}
         style={{color: "red"}}
-        onClick={()=>handleMarkerClick(rental._id)}
+        onClick={()=>handleMarkerClick(rental.suburb)}
       />
+    
       </Marker>
       ))}
   </ReactMapGL>

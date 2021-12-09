@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
       height: "300px"
     },
     map: {
-        height: "600px"
+        height: "600px",
+        borderRadius: "20px"
     },
 }));
 
