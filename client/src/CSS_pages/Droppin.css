@@ -1,0 +1,95 @@
+.droppin {
+  display: flex;
+}
+
+.filter {
+  position: absolute;
+  width: 1200px;
+  height: 60px;
+  left: 301px;
+  top: 179px;
+
+  background: #ffffff;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.suburb_select {
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding-left: 7px;
+  position: absolute;
+  width: 135px;
+  height: 35px;
+  right: 470px;
+  top: 10px;
+}
+
+.property_select {
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding-left: 7px;
+  position: absolute;
+  width: 135px;
+  height: 35px;
+  right: 140px;
+  top: 190px;
+}
+
+.rent_selected {
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding-left: 7px;
+  position: absolute;
+  width: 135px;
+  height: 35px;
+  right: 127px;
+  top: 190px;
+}
+
+.bathroom_select {
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding-left: 7px;
+  position: absolute;
+  width: 135px;
+  height: 35px;
+  right: 114px;
+  top: 190px;
+}
+
+.bedroom_select {
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding-left: 7px;
+  position: absolute;
+  width: 135px;
+  height: 35px;
+  right: 100px;
+  top: 190px;
+}
+
+.search {
+  width: 180px;
+  height: 35px;
+  left: 1110px;
+  top: 190px;
+  background-color: white;
+  position: absolute;
+}
+
+.search img {
+  left: 150px;
+  top: 7px;
+  position: absolute;
+}
+
+.Test {
+  position: absolute;
+  top: 500px;
+}
+
+.filter_button {
+  position: absolute;
+  top: 190px;
+  left: 180px;
+}
+
+.Droppin{
+  z-index: 1;
+}
