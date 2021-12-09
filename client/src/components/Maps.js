@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/paper';
 import Typography from '@material-ui/core/typography';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import '../CSS_pages/Droppin.css';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 const useStyles = makeStyles((theme) => ({
   price: {
@@ -33,7 +34,8 @@ function Map() {
     height: 700,
     latitude: -36.8872772,
     longitude: 174.7473766,
-    zoom: 12
+    zoom: 12,
+    zIndex: -1
   });
 
   const [rental, setRental] = useState([]);

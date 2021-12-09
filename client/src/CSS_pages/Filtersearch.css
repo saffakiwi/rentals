@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
 .social_filters {
   position: absolute;
   width: 400px;
@@ -225,3 +229,235 @@
   border: 0.509766px solid #000000;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
+=======
+.social_filters{
+    position:absolute;
+    width: 400px;
+    height: 1103.74px;
+    left: 1100px;
+    top: 245px;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    background: #FFFFFF;
+}
+
+.social_filter_text{
+    position: absolute;
+    left: 117.35px;
+    top: 15px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 11px;
+    text-align: center;
+
+    color: #C01F40;
+}
+
+.grey_block{
+    position:absolute;
+    width:400px;
+    height:100px;
+    top:50px;
+    background-color: rgba(196, 196, 196, 0.3);
+}
+
+.supermarkets_text{
+    position: absolute;
+    left: 10px;
+    top: 170px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 11px;
+    text-align: center;
+
+    color: #C01F40;
+}
+
+.form_group_supermarkets{
+    position:absolute;
+    left:1120px;
+    top:438px;
+    width: 200px;
+}
+
+.form_group_supermarkets2{
+    position:absolute;
+    left:1340px;
+    top:438px;
+}
+
+.Line{
+    border-top: 1px solid black;
+    width:350px;
+    position:absolute;
+    left:1120px;
+    top:600px;
+}
+
+.parks_text{
+    position: absolute;
+    left: 10px;
+    top: 380px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 11px;
+    text-align: center;
+
+    color: #C01F40;
+}
+
+.parks{
+    position: absolute;
+    top:380px;
+    left:10px;
+}
+
+.form_group_parks{
+    position:absolute;
+    left:1120px;
+    top:272px;
+    width:200px;
+}
+
+.form_group_parks2{
+    position:absolute;
+    left:1340px;
+    top:272px;
+    width:200px;
+}
+
+.Line2{
+    border-top: 1px solid black;
+    width:350px;
+    position:absolute;
+    left:1120px;
+    top:850px;
+}
+
+.pet{
+    position: absolute;
+    top:900px;
+    left:10px;
+}
+
+.form_group_pet{
+    position:absolute;
+    left:1120px;
+    top:0px;
+    width:200px;
+}
+
+.form_group_pets{
+    position:absolute;
+    left:1340px;
+    top:272;
+    width:200px;
+}
+
+.pet_text{
+    position: absolute;
+    left: 10px;
+    top: 630px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 11px;
+    text-align: center;
+
+    color: #C01F40;
+}
+
+.Line3{
+    border-top: 1px solid black;
+    width:350px;
+    position:absolute;
+    left:1120px;
+    top:1020px;
+}
+
+.keyword_search{
+    position: absolute;
+    left: 10px;
+    top: 800px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 11px;
+    text-align: center;
+
+    color: #C01F40;
+}
+
+.text_box{
+    position: absolute;
+    width: 370.2px;
+    height: 41.92px;
+    left: 14.02px;
+    top: 840.83px;
+
+    background: rgba(196, 196, 196, 0.2);
+    border: 0.509766px solid #000000;
+    box-sizing: border-box;
+}
+
+.grey_box2{
+    position: absolute;
+    width: 400px;
+    height: 86px;
+    left: 0px;
+    top: 1020.83px;
+
+    background: rgba(196, 196, 196, 0.2);
+    box-sizing: border-box;
+}
+
+.search_button{
+    position: absolute;
+    width: 168.7px;
+    height: 41.41px;
+    left: 1318.14px;
+    top: 1285.43px;
+
+    background: rgba(192, 31, 64, 0.53);
+    border-radius: 6.88184px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 11px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.text_box2{
+    position: absolute;
+    width: 320.73px;
+    height: 49.25px;
+    left: 40px;
+    top: 60px;
+    z-index: 1;
+
+    background-color:white;
+    border: 0.509766px solid #000000;
+    box-sizing: border-box;
+}
+>>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
+=======
+>>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac

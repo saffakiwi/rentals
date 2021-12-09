@@ -11,6 +11,8 @@ import Filtersearch from '../components/Filtersearch';
 import Propertysearch from '../components/Propertysearch';
 import Map from '../components/Maps';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import searchIcon from '../components/images/Vector (5).png'
+import filter from '../components/images/Vector (6).png';
 
 const useStyles = makeStyles((theme) => ({
     searchfilter: {
@@ -118,9 +120,7 @@ function Droppin() {
                     <MenuItem value={3}>2</MenuItem>
                 </Select>
                 <button class="search">
-                
-
-
+                    <img src={searchIcon}/>
                 </button>
                 <Button
                     id="basic-button"
@@ -130,10 +130,7 @@ function Droppin() {
                     className = "filter_button"
                     onClick={handleClick}
                 >
-                    
-
-
-
+                    <img src={filter}/>
                 </Button>
                 <Menu
                     id="basic-menu"

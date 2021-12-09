@@ -90,7 +90,6 @@
   left: 180px;
 }
 
-.map {
-  position: absolute;
-  top: 400px;
+.Droppin{
+  z-index: 1;
 }
