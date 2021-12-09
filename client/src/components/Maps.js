@@ -6,6 +6,7 @@ import axios from 'axios';
 import Paper from '@material-ui/core/paper';
 import Typography from '@material-ui/core/typography';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import '../CSS_pages/Droppin.css';
 
 const useStyles = makeStyles((theme) => ({
   price: {
@@ -26,6 +27,7 @@ function Map() {
   
 
   const [viewport, setViewport] = useState({
+    marginTop: 300,
     width: '100%',
     height: 400,
     latitude: -36.8872772,
