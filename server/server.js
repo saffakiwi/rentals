@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
 const port = 4002
-
 
 //config
 app.use(cors());
@@ -101,43 +97,3 @@ const amenitiesSchema = {
 app.listen(port, function() {
   console.log("server running on port 4002")
 })
-
-<<<<<<< HEAD
-=======
-const express = require("express");
-const app = express();
-const cors = require("cors");
-const mongoose = require("mongoose")
-const port = 5003;
-
-//config
-app.use(cors())
-app.use(express.json());
-app.use(express.urlencoded({extended: false}))
-
-//connect to mongodb
-mongoose.connect('mongodb+srv://Jacques15:Stellenbosch15@cluster0.ggpld.mongodb.net/Test_Database?retryWrites=true&w=majority')
-.then(() => console.log("DBconnected "))
-.catch(err => console.error(err));
-
-//data schema
-const itemsSchema = {
-    Name: String,
-    Price: String,
-    Bedrooms: String,
-    Bathrooms:String,
-    Latitude:String,
-    Longitude:String,
-}
-//data model
-const Item = mongoose.model('Item', itemsSchema, 'Rentals');
-info = Item.find({});
-console.log(info);
-
-app.listen(port, function () {
-    console.log("Express is running");
-  });
-  
->>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
-=======
->>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
