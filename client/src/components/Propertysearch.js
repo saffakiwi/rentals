@@ -14,10 +14,14 @@ class Propertysearch extends Component{
     render(){
             return (
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className ="Propertysearch">
 =======
                 <div className ="Propertysearch">
 >>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
+=======
+                <div className ="Propertysearch">
+>>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
                 <div className="social_filters">
                     <div className = "text_box2"> </div>
                     <span className = "social_filter_text">Property Filters</span>
