@@ -2,45 +2,18 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
-<<<<<<< HEAD
-=======
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon start"
->>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
-=======
->>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
-    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-graphql": "^0.12.0",
-    "graphql": "^16.0.1",
-<<<<<<< HEAD
-=======
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
->>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
-=======
->>>>>>> 2141f5af748b9834b9721f4bb2386bfa17ad23ac
-    "mongoose": "^6.0.14",
+    "mongoose": "^6.1.0",
     "nodemon": "^2.0.15"
   }
 }
