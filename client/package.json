@@ -5,6 +5,7 @@
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.16",
     "@material-ui/core": "^4.12.3",
+<<<<<<< HEAD
     "@material-ui/icons": "^4.11.2",
     "@react-google-maps/api": "^2.7.0",
     "@testing-library/react": "^11.2.7",
@@ -17,6 +18,15 @@
     "react-router-dom": "^6.0.2",
     "react-script": "^2.0.5",
     "react-scripts": "4.0.3",
+=======
+    "@react-google-maps/api": "^2.7.0",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+>>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -42,6 +52,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "proxy": "http://localhost:4002"
+=======
+  }
+>>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
 }

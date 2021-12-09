@@ -13,7 +13,11 @@ import {FormControl} from "@material-ui/core";
 class Propertysearch extends Component{
     render(){
             return (
+<<<<<<< HEAD
             <div className ="Propertysearch">
+=======
+                <div className ="Propertysearch">
+>>>>>>> 999c7a70c5cb79c41603b7e2679ffbfb3f2a7927
                 <div className="social_filters">
                     <div className = "text_box2"> </div>
                     <span className = "social_filter_text">Property Filters</span>
