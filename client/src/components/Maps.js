@@ -40,12 +40,31 @@ function Map() {
 
   const [rental, setRental] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null)
-  
+  const [suburbName, setSuburbName] = useState('');
+  const [suburbData, setSuburbData] = useState();
+  const [data, setData] = useState([]);
+
+  {/*useEffect(() => {
+    axios.get('http://localhost:4002/rentals')
+    .then(rental => rental.data)
+    console.log(rental)
+    .then(rentalData => {
+      setRental(suburbData)
+    })
+    .catch(err => {
+      console.log(err)
+    });
+  }, []);
+
+  useEffect(() => {
+    setSuburbData(data.filter(i => i.suburb === suburbName)[0])
+  }, (data, suburbName))*/}
+
   useEffect(() => {
     const getRental = async () => {
       try {
         const res = await axios.get("http://localhost:4002/rentals");
-        setRental(res.data)
+        setRental(response => res.data)
         console.log(res.data)
       } catch (err) {
         console.log(err)
@@ -53,6 +72,10 @@ function Map() {
     };
     getRental()
   }, []);
+
+  {/*useEffect(() => {
+    setRental(data.filter(rental => rental.suburb === suburbName)[0])
+  }, [data, suburbName])*/}
 
   const handleMarkerClick = (suburb) =>{
     setCurrentPlaceId("mt eden")
