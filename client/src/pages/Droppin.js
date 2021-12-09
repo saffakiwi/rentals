@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
     },
     map: {
         height: "600px",
-        borderRadius: "20px"
+        borderRadius: "20px",
+        zIndex: -1,
     },
 }));
 

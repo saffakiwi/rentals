@@ -1,3 +1,7 @@
+.filtersearch {
+  z-index: 100;
+}
+
 .social_filters {
   position: absolute;
   width: 400px;
@@ -6,6 +10,7 @@
   top: 245px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   background: #ffffff;
+  z-index: 1;
 }
 
 .social_filter_text {

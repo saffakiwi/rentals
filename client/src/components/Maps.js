@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import ReactMapGL,  {Marker} from 'react-map-gl';
+import ReactMapGL,  {Marker, Popup } from 'react-map-gl';
 import {Room} from '@material-ui/icons';
 import axios from 'axios';
 import Paper from '@material-ui/core/paper';
@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/typography';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import '../CSS_pages/Droppin.css';
 import zIndex from '@material-ui/core/styles/zIndex';
+import Filtersearch from './Filtersearch';
 
 const useStyles = makeStyles((theme) => ({
   price: {
@@ -17,9 +18,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     marginBottom: "-11px",
   },
-  pins: {
-    
-    
+  amenity: {
+    backgroundColor: "blue",
+    color: "white",
+    padding: "3px",
+    display: "flex",
+    marginBottom: "-11px",
+  },
+  pic: {
+    height: "100px",
+    width: "100px",
   }
 }));
 
@@ -40,26 +48,9 @@ function Map() {
 
   const [rental, setRental] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null)
-  const [suburbName, setSuburbName] = useState('');
-  const [suburbData, setSuburbData] = useState();
-  const [data, setData] = useState([]);
-
-  {/*useEffect(() => {
-    axios.get('http://localhost:4002/rentals')
-    .then(rental => rental.data)
-    console.log(rental)
-    .then(rentalData => {
-      setRental(suburbData)
-    })
-    .catch(err => {
-      console.log(err)
-    });
-  }, []);
-
-  useEffect(() => {
-    setSuburbData(data.filter(i => i.suburb === suburbName)[0])
-  }, (data, suburbName))*/}
-
+  const [amenity, setAmenity] = useState([]);
+ 
+//Getting data from server for the rentals
   useEffect(() => {
     const getRental = async () => {
       try {
@@ -73,17 +64,28 @@ function Map() {
     getRental()
   }, []);
 
-  {/*useEffect(() => {
-    setRental(data.filter(rental => rental.suburb === suburbName)[0])
-  }, [data, suburbName])*/}
+  //getting data from the server for the amenities
+  useEffect(() => {
+    const getAmenity = async () => {
+      try {
+        const res = await axios.get("http://localhost:4002/amenities");
+        setAmenity(response => res.data)
+        console.log(res.data)
+      } catch (err) {
+        console.log(err)
+      }
+    };
+    getAmenity()
+  }, []);
 
-  const handleMarkerClick = (suburb) =>{
-    setCurrentPlaceId("mt eden")
+  const handleMarkerClick = (id) =>{
+    setCurrentPlaceId(id)
   }
 
 
   return (
     <div>
+
         <ReactMapGL
   {...viewport}
   
@@ -93,7 +95,7 @@ function Map() {
 
 
 {rental.map(rental => (
-
+  <>
   <Marker 
     latitude={rental.Latitude} 
     longitude={rental.Longitude} 
@@ -106,15 +108,67 @@ function Map() {
         </Paper>
       <Room className={classes.pins}
         style={{color: "red"}}
-        onClick={()=>handleMarkerClick(rental.suburb)}
-      />
-    
+        onClick={() => handleMarkerClick(rental._id)}/>
       </Marker>
-      ))}
+      {rental._id === currentPlaceId &&
+      <Popup
+        latitude={rental.Latitude}
+        longitude={rental.Longitude}
+        closeButton={true}
+        closeOnClick={false}
+        anchor="bottom"
+        onClose={() => setCurrentPlaceId(null)}>
+
+        <div>
+          <img className={classes.pic} src="lounge.jpeg" alt="hero"/>
+          <h4 style={{color: "black"}}>${rental.Price}</h4>
+          <p style={{color: "black"}}>{rental.Bedrooms} Beds | {rental.Bathrooms} Baths</p>
+        </div>
+
+        </Popup>
+   }
+   </>
+))}
+
+{amenity.map(amenity => (
+  <>
+  <Marker 
+    latitude={amenity.Latitude} 
+    longitude={amenity.Longitude} 
+    offsetLeft={-20} 
+    offsetTop={-10}>
+      <Paper className={classes.amenity}>
+        <Typography >
+        {amenity.Name}
+        </Typography>
+        </Paper>
+      <Room className={classes.pins}
+        style={{color: "blue"}}
+        onClick={() => handleMarkerClick(amenity._id)}/>
+      </Marker>
+      {amenity._id === currentPlaceId &&
+      <Popup
+        latitude={amenity.Latitude}
+        longitude={amenity.Longitude}
+        closeButton={true}
+        closeOnClick={false}
+        anchor="bottom"
+        onClose={() => setCurrentPlaceId(null)}>
+
+        <div>
+          <img className={classes.pic} src="dogs.jpeg" alt="hero"/>
+          <h4 style={{color: "black"}}>{amenity.Name}</h4>
+          <p style={{color: "black"}}>{amenity.Suburb}</p>
+        </div>
+
+        </Popup>
+   }
+   </>
+))}
   </ReactMapGL>
     </div>
    
-)
+);
 }
 
 export default Map;
