@@ -20,6 +20,7 @@ mongoose
     throw error
   })
 
+// Ruan server side//
 //data schema
 const rentalsSchema = {
   name: String,
@@ -59,10 +60,39 @@ app.post('/rentals', (req, res) => {
 })
 
 
-//delete route
 
+//Jacques server side//
 
-//update route
+const amenitiesSchema = {
+    name: String,
+    latitude: Number,
+    longitude: Number,
+    suburb: String,
+  }
+  
+  //data model
+  const Amenities = mongoose.model("Amenities", amenitiesSchema);
+  
+  //read route
+  app.get('/amenities', (req, res) => {
+    Amenities.find()
+    .then((amenities) => res.json(amenities))
+    .catch((err) => res.status(400).json('Error: ' + err))
+  });
+  
+  //create route
+  app.post('/amenities', (req, res) => {
+    const newAmenity = new Amenity({
+      _id: req.body._id,
+      name: req.body.name,
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
+      suburb: req.body.suburb,
+    })
+    newAmenity.save()
+    .then(contact => console.log(contact))
+    .catch((err) => res.status(400).json("Error " + err))
+  })
 
 app.listen(port, function() {
   console.log("server running on port 4002")
